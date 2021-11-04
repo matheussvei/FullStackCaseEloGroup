@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: rgba(14, 15, 70, 0.438);
+}
+
+.header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header .material-icons {
+    max-height: 32px;
+}
+
+.header .title-group {
+    padding-left: 25px;  
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+
+.header .title-group i {
+    padding-left: 10px;
+    height: 1.35rem;
+}

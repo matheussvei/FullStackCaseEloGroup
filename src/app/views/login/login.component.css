@@ -1,0 +1,74 @@
+.login {
+    position: relative;
+    margin-top:2%;
+    margin-left:15%;
+    height:unset;
+    width: 325px;
+}
+
+.card-content{
+    max-height: 450px;
+    max-width: 325px;
+}
+
+.loginForm {
+    margin-right:2rem;
+    margin-left:2rem;
+    margin-top:auto;
+    display: grid;
+    line-height: 2.5rem;
+    max-height: 250px;
+}
+
+.header-img .logo {
+    width: 260px;
+    margin-left:0.3rem;
+    margin-top:0.8rem;
+    object-fit: contain;
+}
+
+.label {
+    font-size:1rem;
+    font-weight: 550;
+    padding-top: 15px;
+    margin-left:0.7rem;
+    line-height: 2rem;
+}
+
+.input {
+    max-height: 10px;
+    padding-top: 8px;
+}
+
+.errorMessage{
+    color:red;
+    font-size: 12px;
+    line-height: 1.4rem;
+}
+
+
+.bottom{
+    margin:auto;
+    padding-top: 1.5rem ;
+    position:relative;
+    justify-content: baseline;
+}
+
+.button {
+    margin:auto;
+    display:block;
+    margin-top: 2.5rem;
+    width: 9rem;
+    background-color: rgba(114, 117, 92, 0.192);
+}
+
+
+.footer {
+    display: flex;
+    justify-content:flex-end;
+    margin-right: 5px;
+    padding-top: 1.7rem;
+    font-weight: bold;
+    position:static;
+}
+

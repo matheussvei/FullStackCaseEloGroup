@@ -1,0 +1,52 @@
+<div class="list-container">
+
+    <div class="potential-container column-container">
+      <div class="list"
+           cdkDropList
+           #potentialList="cdkDropList"
+           [cdkDropListData]="potentials"
+           [cdkDropListConnectedTo]="[confirmedList]"
+           (cdkDropListDropped)="onDrop($event)">
+        <h2>Clientes em Potencial</h2>
+        <mat-card *ngFor="let potential of potentials" cdkDrag>
+          <mat-card-header ng-If="this.potentials.length > 0">
+            <mat-card-title class="cardName">{{potential.name}}</mat-card-title>
+            <mat-card-subtitle class="cardCategory">{{potential.category}}</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class="confirmed-container column-container">
+      <div class="list"
+           cdkDropList
+           #confirmedList="cdkDropList"
+           [cdkDropListData]="confirmeds"
+           [cdkDropListConnectedTo]="[scheduledList]"
+           (cdkDropListDropped)="onDrop($event)">
+        <h2>Dados Confirmados</h2>
+        <mat-card *ngFor="let confirmed of confirmeds" cdkDrag>
+          <mat-card-header ng-If="this.confirmeds.length > 0">
+            <mat-card-title class="cardName">{{confirmed.name}}</mat-card-title>
+            <mat-card-subtitle class="cardCategory">{{confirmed.category}}</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class="scheduled-container column-container">
+      <div class="list"
+           cdkDropList
+           #scheduledList="cdkDropList"
+           [cdkDropListData]="scheduleds"
+           [cdkDropListConnectedTo]="[]"
+           (cdkDropListDropped)="onDrop($event)">
+        <h2>Reunião Agendada</h2>
+        <mat-card *ngFor="let scheduled of scheduleds" cdkDrag>
+          <mat-card-header ng-If="this.scheduleds.length > 0" >
+            <mat-card-title class="cardName">{{scheduled.name}}</mat-card-title>
+            <mat-card-subtitle class="cardCategory">{{scheduled.category}}</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </div>
+    </div>

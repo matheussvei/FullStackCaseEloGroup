@@ -1,0 +1,45 @@
+<mat-card class="login mat-elevation-z5">
+   
+    <mat-card-header class="header-img">
+        <img class="logo" src="assets/images/elogroup.png" alt="logo">
+    </mat-card-header>
+
+        <div class="card-content">
+        <form [formGroup]="formLogin" class="loginForm">
+    <label class="label">Usuário *</label>
+        <input formControlName="usuario" class="input" id="user" type= "text" matInput placeholder="Usuário">
+        <ng-container *ngFor="let erro of mensagens.usuario">
+                <span class="errorMessage"
+                    *ngIf="formLogin.get('usuario')!.hasError(erro.tipo) && (formLogin.get('confirmPassword')!.dirty || formLogin.get('confirmPassword')!.touched)">
+                    {{erro.mensagem}}
+                </span>
+            </ng-container>
+
+    <label class="label">Password *</label>
+        <input formControlName="password" class="input" id="password" type= "password" matInput placeholder="Password">
+        <ng-container *ngFor="let erro of mensagens.password">
+            <span class="errorMessage"
+                *ngIf="formLogin.get('password')!.hasError(erro.tipo) && (formLogin.get('confirmPassword')!.dirty || formLogin.get('confirmPassword')!.touched)">
+                {{erro.mensagem}}
+            </span>
+        </ng-container>
+
+    <label class="label">Confirmação Password *</label>
+        <input formControlName="confirmPassword" class="input" id="conf-password" type= "password" matInput placeholder="Confirm Password">
+        <ng-container *ngFor="let erro of mensagens.confirmPassword">
+            <span class="errorMessage"
+                *ngIf="formLogin.get('confirmPassword')!.hasError(erro.tipo) && (formLogin.get('confirmPassword')!.dirty || formLogin.get('confirmPassword')!.touched)">
+                {{erro.mensagem}}
+            </span>
+        </ng-container>
+
+    </form>
+    <div class="bottom">
+        <button class="button" mat-raised-button (click)='checkValidation()'>Log-in</button>
+        <p class="footer">EloGroup, 2021<p>
+        </div>
+</div>
+
+    
+
+</mat-card>

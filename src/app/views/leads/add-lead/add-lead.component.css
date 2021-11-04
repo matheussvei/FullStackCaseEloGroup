@@ -1,0 +1,91 @@
+.addleads {
+    height:500px; 
+    width: 1100px;
+    display:grid;
+ }
+
+ .addLeadsCard{
+     display:flex;
+     padding-bottom: 100px;
+
+ }
+ 
+ .header {
+     display: flex;
+     max-height: 80px;
+     max-width: 1000px;
+     align-content: center;
+ }
+ 
+ .header .header-title{
+     display:flex;
+     position: static;
+     font-size:xx-large;
+     font-weight: bold;
+     margin-top:2rem;
+     margin-left:25%;
+ }
+ 
+ .card-form{
+
+    max-height: 450px;
+    padding-bottom: 2rem;
+}
+
+.leadForm {
+
+    margin-left:4rem;
+    margin-top:2.5rem;
+    display: grid;
+    line-height: 2.5rem;
+    max-height: 250px;
+}
+
+ .label {
+    font-size:1rem;
+    font-weight: 550;
+    padding-top: 15px;
+    margin-left:0.7rem;
+    line-height: 2rem;
+}
+
+.input {
+    max-height: 10px;
+    padding-top: 8px;
+}
+
+.errorMessage{
+    color:red;
+    font-size: 12px;
+    line-height: 1.4rem;
+}
+
+
+.button {
+    display:block;
+    margin-left:10%;
+    margin-top:70%;
+    width: 10rem;
+    height: 2.5rem;
+    background-color: rgba(114, 117, 92, 0.192);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;}
+
+.container {
+    margin-left:40%;
+    margin-top:5%;
+    max-width: unset;
+}
+
+.checkboxTitle {
+    font-size:large;
+    padding-bottom: 5px;
+}
+
+.checkboxRow{
+    font-weight: 450;
+}

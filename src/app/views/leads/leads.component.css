@@ -1,0 +1,35 @@
+.leads {
+    min-height: 500px;
+    height: unset;
+    max-height: unset;     
+    width: 1000px;
+}
+
+.header {
+    display: flex;
+    max-height: 80px;
+    max-width: 1000px;
+    align-content: center;
+}
+
+.header .header-title{
+    display:flex;
+    position: static;
+    font-size:xx-large;
+    font-weight: bold;
+    margin-top:2rem;
+    margin-left:25%;
+}
+
+.button {
+    margin-left:2rem;
+    margin-top: 3rem;
+    display:block;
+    width: 10rem;
+    height: 2.5rem;
+    background-color: rgba(114, 117, 92, 0.192);
+}
+
+.table {
+    margin-bottom: 20px;
+}

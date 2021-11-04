@@ -1,0 +1,18 @@
+.sidenav {
+    background-color: rgba(14, 15, 70, 0.233);
+    position:absolute;
+    min-height: 700px;
+    max-width: 125px;
+    size-adjust:unset;
+
+}
+
+.sidenav i {
+    padding-right: 10px;
+    height: 1.6rem;
+}
+
+.content{
+    padding: 16px;
+    background-color: #FFF;
+}

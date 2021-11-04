@@ -1,0 +1,30 @@
+.home {
+    margin-top:5%;
+    margin-left: 10%;
+    width: 550px;
+    height: 250px;
+}
+
+.home .title{
+    position:relative;
+    font-size: 2.6rem;
+    font-weight: bolder;
+    text-align: center;
+    top:30%;
+
+}
+
+.home .subtitle{
+    position: relative;
+    font-size:1.3rem;
+    text-align:center;
+    top:40%
+}
+
+.button{
+    margin:auto;
+    display:block;
+    margin-top: 8.5rem;
+    width: 9rem;
+    background-color: rgba(114, 117, 92, 0.192);
+}

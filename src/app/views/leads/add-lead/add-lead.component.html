@@ -1,0 +1,74 @@
+<mat-card class="addleads mat-elevation-z5">
+
+    <mat-card-header class="header">
+        <img class="logo" src="assets/images/elogroup.png" alt="logo">
+        <h1 class="header-title">Adicionar Novo Lead</h1>
+    </mat-card-header>
+
+    <div class=addLeadsCard>
+    <div class="card-form">
+        <form [formGroup]="formLead" class="leadForm">
+    <label class="label">Nome *</label>
+        <input formControlName="name" class="input" id="name" type= "text" matInput placeholder="Nome">
+        <ng-container *ngFor="let erro of mensagens.name">
+                <span class="errorMessage"
+                    *ngIf="formLead.get('name')!.hasError(erro.tipo) && (formLead.get('name')!.dirty || formLead.get('name')!.touched)">
+                    {{erro.mensagem}}
+                </span>
+            </ng-container>
+
+    <label class="label">Telefone *</label>
+        <input formControlName="telephone" class="input" id="telephone" type= "number" matInput placeholder="DDD + Telefone" maxlength="11" >
+        <ng-container *ngFor="let erro of mensagens.telephone">
+            <span class="errorMessage"
+                *ngIf="formLead.get('telephone')!.hasError(erro.tipo) && (formLead.get('telephone')!.dirty || formLead.get('telephone')!.touched)">
+                {{erro.mensagem}}
+            </span>
+        </ng-container>
+
+    <label class="label">E-mail *</label>
+        <input formControlName="email" class="input" id="email" type= "email" matInput placeholder="E-Mail">
+        <ng-container *ngFor="let erro of mensagens.email">
+            <span class="errorMessage"
+                *ngIf="formLead.get('email')!.hasError(erro.tipo) && (formLead.get('email')!.dirty || formLead.get('email')!.touched)">
+                {{erro.mensagem}}
+            </span>
+        </ng-container>
+        </form>
+    </div>
+            <div class="container mt-5">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          [(ngModel)]="parentSelector"
+                          [value]="-1"
+                          (change)="opportunityCheck($event)"
+                        />
+                      </th>
+                      <th class="checkboxTitle" scope="col">Oportunidades *</th>
+                    </tr>
+                  </thead>
+                  <br>
+                  <tbody>
+                    <tr *ngFor="let n of oportunidades">
+                      <th scope="row">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          [value]="n.id"
+                          [checked]="n.select"
+                          (change)="opportunityCheck($event)"
+                          ng-model='leadCheckbox'
+                        >
+                      </th>
+                      <td class="checkboxRow">{{ n.name }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button class="button" mat-raised-button (click)="checkLeadValidation()">Salvar</button>
+              </div>
+
