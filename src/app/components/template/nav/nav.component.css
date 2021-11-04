@@ -1,7 +1,7 @@
 .sidenav {
     background-color: rgba(14, 15, 70, 0.233);
-    position:absolute;
-    min-height: 700px;
+    position:fixed;
+    max-height: unset;
     max-width: 125px;
     size-adjust:unset;
 
